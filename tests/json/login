@@ -1,0 +1,45 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://dev-s4-training.gotpantheon.com/"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "Login"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-name"
+      },
+      "text": "staff"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "edit-pass"
+      },
+      "text": "staff"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "edit-submit"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "Staff actions"
+    }
+  ]
+}
