@@ -1,5 +1,7 @@
 <?php
 
 foreach (glob(__DIR__ ."/tests/php/*.php") as $filename) {
-	exec('vendor/bin/phpunit '. $filename);
+	$output = array();
+	exec('vendor/bin/phpunit '. $filename, $output);
+	print implode("\n", $output);
 }
